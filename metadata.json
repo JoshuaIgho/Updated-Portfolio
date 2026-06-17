@@ -1,0 +1,6 @@
+{
+  "name": "Monochrome Web Portfolio",
+  "description": "A high-performance personal portfolio featuring raw structural typography, intense high-contrast block layouts, and Monochrome Neo-Brutalism style.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
