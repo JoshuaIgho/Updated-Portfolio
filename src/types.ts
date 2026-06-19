@@ -8,6 +8,9 @@ export interface Project {
   tags: string[];
   demoUrl?: string;
   githubUrl?: string;
+  frontendGithubUrl?: string;
+  backendGithubUrl?: string;
+  pendingText?: string;
   keyFeatures: string[];
   stats?: { label: string; value: string }[];
 }

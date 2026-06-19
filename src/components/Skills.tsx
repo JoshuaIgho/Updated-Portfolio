@@ -21,7 +21,7 @@ export default function Skills() {
   );
 
   return (
-    <section id="skills" className="py-12 md:py-20 px-4 sm:px-6 max-w-7xl mx-auto scroll-mt-24">
+    <section id="skills" className="py-12 md:py-20 px-6 md:px-8 max-w-[1440px] mx-auto scroll-mt-24">
       
       {/* Structural Brutalist Category Header */}
       <div className="border-2 border-black bg-black text-white p-6 sm:p-8 mb-8 shadow-[6px_6px_0px_#000000] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
@@ -140,7 +140,7 @@ export default function Skills() {
                           className="w-full text-left p-2 bg-white hover:bg-black hover:text-white border border-black flex items-center justify-between gap-2 group brutalist-btn-transition cursor-pointer text-[11px]"
                         >
                           <span className="font-bold truncate group-hover:underline uppercase">{proj.title}</span>
-                          <span className="text-[10px] text-gray-450 group-hover:text-amber-300 font-mono shrink-0 flex items-center gap-0.5 font-bold uppercase select-none">
+                          <span className="text-[10px] text-gray-400 group-hover:text-[#e2e8f0] font-mono shrink-0 flex items-center gap-0.5 font-bold uppercase select-none">
                             VIEW PROJ
                             <Code className="w-3 h-3" />
                           </span>

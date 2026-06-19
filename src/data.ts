@@ -1,79 +1,101 @@
 import { Project, Experience, Skill } from './types';
 
 export const PERSONAL_INFO = {
-  name: 'Kael Mercer',
-  title: 'Creative Technologist & Full-Stack Architect',
-  location: 'Chicago, IL',
-  status: 'Available for core contracts & bespoke UI architecture',
-  bio: 'Engineering high-contrast interactive platforms with raw mechanical speed and structural precision. Specializing in low-latency systems, canvas-level human interface designs, and robust TypeScript-first architectures. Adherent of Monochrome Neo-Brutalism and pixel-perfect clarity.',
-  email: 'kael@mercer.engineering',
-  github: 'https://github.com/kael-mercer',
-  twitter: 'https://twitter.com/kaelmercer',
-  readiness: 'Open to selective opportunities'
+  name: 'Joshua Igho',
+  title: 'Full-Stack Developer',
+  location: 'Nigeria',
+  status: 'Available for Opportunities',
+  bio: 'Building scalable web applications and exploring modern software engineering practices. Experienced in designing modern user interfaces with robust server integrations.',
+  email: 'joshuaalex822@gmail.com',
+  github: 'https://github.com/JoshuaIgho',
+  twitter: 'https://twitter.com/JoshuaIgho',
+  readiness: 'Available for Opportunities'
 };
 
 export const PROJECTS: Project[] = [
   {
-    id: 'hyperion',
-    title: 'Hyperion Core Runtime',
-    category: 'Virtual Layout Engine',
-    description: 'A performance-first custom reactive layout synchronizer and WebAssembly-backed diff compiler optimized for frame-perfect UI streaming.',
-    role: 'Lead Architect & Systems Engineer',
-    timeline: 'Q1 – Q3 2025',
-    tags: ['TypeScript', 'Rust', 'WebAssembly', 'WebSockets', 'Tailwind'],
-    demoUrl: '#demo',
-    githubUrl: 'https://github.com/kael-mercer/hyperion-core',
+    id: 'ijituyi',
+    title: 'IJITUYI SIGNATURE',
+    category: 'Branding Layout',
+    description: 'A modern monogram business website featuring premium branding architectures, custom typography layouts, service showcases, and seamless contact integrations.',
+    role: 'Lead Brand Architect',
+    timeline: 'Q1 – Q2 2026',
+    tags: ['REACT', 'TYPESCRIPT', 'HTML5', 'CSS3'],
+    githubUrl: 'https://github.com/JoshuaIgho/Monogram-Website',
+    pendingText: '[ LIVE_PREVIEW_PENDING ]',
     keyFeatures: [
-      'Rust-compiled WASM layout differential parser running in < 1.2ms',
-      'Unified WebSocket channel with dynamic frame interpolation',
-      'Zero-dependency reactive lifecycle manager with 100% test coverage'
+      'Bespoke SVG monogram vector calculations with high-density layout rendering',
+      'Asymmetrical typographic systems using customized modern serif pairings',
+      'Client touchpoint endpoints with direct message compression pipelines'
     ],
     stats: [
-      { label: 'Ingestion Speed', value: '48k patches/s' },
-      { label: 'Bundle Size', value: '11.8 kB gzip' },
-      { label: 'Frame Latency', value: '< 2.4ms' }
+      { label: 'Branding Asset', value: 'SVG Monogram' },
+      { label: 'Render Score', value: '100% Core' },
+      { label: 'Typo Layout', value: 'Asymmetric' }
     ]
   },
   {
-    id: 'nova-os',
-    title: 'Nova Web Desktop (HCI)',
-    category: 'Interactive Environment',
-    description: 'An expansive human-computer interface simulation utilizing strict canvas coordinate bounds, responsive sandboxed windowing, and an interactive audio synthesizer patchbay.',
-    role: 'Interactive Developer',
-    timeline: 'Mid 2024 – Present',
-    tags: ['React', 'motion', 'Canvas API', 'TypeScript', 'Web Audio API'],
-    demoUrl: '#demo',
-    githubUrl: 'https://github.com/kael-mercer/nova-desktop',
+    id: 'charme',
+    title: 'CHARMÉ (FULL-STACK)',
+    category: 'E-Commerce Ecosystem',
+    description: 'A complete e-commerce ecosystem. Frontend deploys high-performance cart, checkout, and tracking flows. Backend operates robust user authentication, Postgres relational asset metrics, and RESTful API operations.',
+    role: 'Full-Stack Software Engineer',
+    timeline: 'Mid – Late 2025',
+    tags: ['NODE.JS', 'POSTGRES', 'EXPRESS', 'REACTJS', 'TAILWIND'],
+    frontendGithubUrl: 'https://github.com/JoshuaIgho/Charm-frontend',
+    backendGithubUrl: 'https://github.com/JoshuaIgho/charme-backend',
+    demoUrl: 'https://charmesiri.vercel.app/',
     keyFeatures: [
-      'Virtual Window Manager with dynamic drag, multi-scale resize, and snap docking',
-      'Web-Audio Synthesizer node-editor with interactive waveform oscillators',
-      'Hardware-accelerated rendering layers falling back gracefully to SVG contexts'
+      'Relational schema metrics storing transactional records and multi-tenant inventory tables',
+      'Secure token authorization (JWT + cookies) protecting state across routes',
+      'Client-side cart reducer pipelines sync-puzzled with session storage engines'
     ],
     stats: [
-      { label: 'Canvas Windows', value: 'Unlimited scale' },
-      { label: 'Audio Latency', value: 'Ultra-low ASIO' },
-      { label: 'Memory Leakage', value: '0.00% over 12h' }
+      { label: 'SQL Latency', value: '< 8ms Fast' },
+      { label: 'Secure Crypt', value: 'bcrypt + JWT' },
+      { label: 'API Pipelines', value: 'RESTful OK' }
     ]
   },
   {
-    id: 'stark-index',
-    title: 'Stark Network Protocol',
-    category: 'Data Pipeline & Analytics',
-    description: 'A high-throughput server telemetry collector and structural indexer generating responsive, interactive D3.js timeline visualization boards.',
-    role: 'Core Systems Architect',
-    timeline: 'Full Year 2023',
-    tags: ['TypeScript', 'Node.js', 'Express', 'D3.js', 'Docker', 'Vite'],
-    demoUrl: '#demo',
-    githubUrl: 'https://github.com/kael-mercer/stark-protocol',
+    id: 'africa-caribbean',
+    title: 'AFRICA CARIBBEAN CONNECT',
+    category: 'Media Engine',
+    description: 'A modern media-centric frontend engine engineered to highlight organization missions, structured multi-channel media content feeds, and crisp communication channels.',
+    role: 'Lead Frontend Developer',
+    timeline: 'Q3 2025',
+    tags: ['REACTJS', 'TAILWIND_CSS'],
+    githubUrl: 'https://github.com/JoshuaIgho/African-Caribbean-Connect',
+    demoUrl: 'https://africa-untold-journeys.vercel.app/',
     keyFeatures: [
-      'Engineered time-series indexing core scaling up to 1.8M indexed logs / second',
-      'Real-time interactive SVGs built with advanced D3 force-directed configurations',
-      'Dynamic telemetry scrubbers with zero-latency visual range interpolation'
+      'Media content feeds with lightweight lazy-loading dynamic thumbnail matrices',
+      'Responsive multi-channel grid sections styled with crisp, modern Tailwind layers',
+      'Fluid transitions and screen bounds optimized for cross-viewport clarity'
     ],
     stats: [
-      { label: 'Log Parsing', value: '1.8M entries/s' },
-      { label: 'Chart Load-Time', value: 'Instant (< 12ms)' },
-      { label: 'Database Footprint', value: 'Reduced by 52%' }
+      { label: 'Feed Speed', value: '< 200ms Load' },
+      { label: 'Design Score', value: '98% AAA' },
+      { label: 'Viewport Ref', value: 'Pure Fluid' }
+    ]
+  },
+  {
+    id: 'chapterdock',
+    title: 'CHAPTERDOCK',
+    category: 'Library Curation Engine',
+    description: 'A sleek, secure web application designed as a modern digital harbor for book lovers to log, manage, and review their personal libraries. Features secure user authentication for login/signup flows, enabling readers to write custom book reviews and assign star ratings to track their reading journeys.',
+    role: 'Backend Developer / Systems',
+    timeline: 'Q4 2025',
+    tags: ['NODE.JS', 'SUPABASE', 'EJS', 'JAVASCRIPT'],
+    githubUrl: 'https://github.com/JoshuaIgho/Book-review',
+    pendingText: '[ DOCKING_LIVE_PENDING ]',
+    keyFeatures: [
+      'Supabase cloud DB synchronization implementing strict Row-Level Security checks',
+      'Interactive reading session tracker storing document indexes locally and globally',
+      'Secure user cookie verification with fast Express-router middleware'
+    ],
+    stats: [
+      { label: 'User Session', value: 'Supabase Auth' },
+      { label: 'DB Rules', value: 'RLS Active' },
+      { label: 'HTML Engine', value: 'EJS Template' }
     ]
   }
 ];

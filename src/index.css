@@ -44,3 +44,40 @@
   transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease, color 0.15s ease;
 }
 
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Custom responsive layout split at 992px */
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .split-layout {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+.split-layout-left, .split-layout-right {
+  grid-column: span 1 / span 1;
+}
+
+@media (min-width: 992px) {
+  .split-layout-left {
+    grid-column: span 6 / span 6;
+  }
+  .split-layout-right {
+    grid-column: span 6 / span 6;
+  }
+}
+
+

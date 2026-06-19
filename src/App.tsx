@@ -48,10 +48,10 @@ export default function App() {
             </div>
             <div>
               <h4 className="text-sm font-display font-black tracking-tight leading-none uppercase">
-                KAELEN MERCER // SYSTEMS WORKSPACE
+                JOSHUA IGHO // SYSTEMS WORKSPACE
               </h4>
               <p className="text-[10px] font-mono text-neutral-400 mt-1 uppercase">
-                CRISP DESIGN AESTHETICS // PIXEL RIGOR & LATENCY MASTER
+                CRISP DESIGN AESTHETICS // PIXEL RIGOR & FULL-STACK ENGINEER
               </p>
             </div>
           </div>
@@ -68,7 +68,7 @@ export default function App() {
             </div>
             <div className="col-span-2 sm:col-span-1">
               <span className="text-neutral-500 block uppercase font-bold">// SECURE LATENCY:</span>
-              <span className="text-amber-300 font-bold bg-neutral-900 border border-neutral-800 px-1.5 py-0.5 leading-none">
+              <span className="text-zinc-300 font-bold bg-neutral-900 border border-neutral-800 px-1.5 py-0.5 leading-none">
                 FIXED L1_SPEED
               </span>
             </div>
@@ -79,7 +79,7 @@ export default function App() {
         {/* Secondary Bottom Footer row */}
         <div className="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-neutral-400">
           <div className="text-center sm:text-left">
-            <span>© 2026 KAEL MERCER. ALL CHANNELS SECURED. MADE IN COIL INDUSTRIAL RUNTIMES.</span>
+            <span>© 2026 JOSHUA IGHO. ALL CHANNELS SECURED. MADE IN COIL INDUSTRIAL RUNTIMES.</span>
           </div>
           
           {/* Scroll to top */}

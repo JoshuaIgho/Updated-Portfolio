@@ -13,7 +13,7 @@ export default function Guestbook() {
 
   // Hydrate guestbook from localStorage or seed fallback
   useEffect(() => {
-    const stored = localStorage.getItem('kael_guestbook');
+    const stored = localStorage.getItem('joshua_guestbook');
     if (stored) {
       try {
         setEntries(JSON.parse(stored));
@@ -22,14 +22,14 @@ export default function Guestbook() {
       }
     } else {
       setEntries(GUESTBOOK_SEED);
-      localStorage.setItem('kael_guestbook', JSON.stringify(GUESTBOOK_SEED));
+      localStorage.setItem('joshua_guestbook', JSON.stringify(GUESTBOOK_SEED));
     }
   }, []);
 
   // Save changes to localStorage helper
   const saveEntries = (updated: GuestbookEntry[]) => {
     setEntries(updated);
-    localStorage.setItem('kael_guestbook', JSON.stringify(updated));
+    localStorage.setItem('joshua_guestbook', JSON.stringify(updated));
   };
 
   // Submit Handler
@@ -78,7 +78,7 @@ export default function Guestbook() {
   };
 
   return (
-    <section id="guestbook" className="py-12 md:py-20 px-4 sm:px-6 max-w-7xl mx-auto scroll-mt-24">
+    <section id="guestbook" className="py-12 md:py-20 px-6 md:px-8 max-w-[1440px] mx-auto scroll-mt-24">
       
       {/* Structural Title Header Block */}
       <div className="border-2 border-black bg-black text-white p-6 sm:p-8 mb-12 shadow-[6px_6px_0px_#000000] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
@@ -104,7 +104,7 @@ export default function Guestbook() {
               <MessageSquare className="w-4 h-4" />
               05 // PROTOCOL: SIGNATURE_REG
             </span>
-            <span className="text-[9px] bg-red-50 text-red-700 font-extrabold px-1.5 py-0.5 border border-red-200 leading-none">
+            <span className="text-[9px] bg-zinc-100 text-[#0d0e11] font-extrabold px-1.5 py-0.5 border border-zinc-300 leading-none">
               PERSISTENT_STATE
             </span>
           </h3>
@@ -161,13 +161,13 @@ export default function Guestbook() {
 
             {/* Response Alerts */}
             {errorMsg && (
-              <div className="bg-[#fff5f5] text-red-700 border border-red-400 p-3 font-mono font-bold select-none text-[10px] leading-relaxed">
+              <div className="bg-zinc-50 text-zinc-800 border border-zinc-300 p-3 font-mono font-bold select-none text-[10px] leading-relaxed uppercase">
                 {errorMsg}
               </div>
             )}
             {successMsg && (
-              <div className="bg-[#f4fbf7] text-emerald-800 border border-emerald-400 p-3 font-mono font-bold select-none text-[10px] leading-relaxed flex items-center gap-1.5">
-                <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
+              <div className="bg-zinc-50 text-[#0d0e11] border border-zinc-300 p-3 font-mono font-bold select-none text-[10px] leading-relaxed flex items-center gap-1.5 uppercase">
+                <CheckCircle className="w-4 h-4 text-[#0d0e11] shrink-0" />
                 <span>{successMsg}</span>
               </div>
             )}

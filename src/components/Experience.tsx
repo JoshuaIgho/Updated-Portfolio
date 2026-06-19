@@ -10,7 +10,7 @@ export default function Experience() {
   };
 
   return (
-    <section id="experience" className="py-12 md:py-20 px-4 sm:px-6 max-w-7xl mx-auto scroll-mt-24">
+    <section id="experience" className="py-12 md:py-20 px-6 md:px-8 max-w-[1440px] mx-auto scroll-mt-24">
       
       {/* SECTION INDUSTRIAL TITLE HEADER */}
       <div className="border-2 border-black bg-black text-white p-6 sm:p-8 mb-12 shadow-[6px_6px_0px_#000000] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
