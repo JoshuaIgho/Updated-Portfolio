@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { PROJECTS } from '../data';
-import { Search, Filter, ArrowUpRight, Github, Code, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
+import { 
+  Search, 
+  Filter, 
+  ArrowUpRight, 
+  Github, 
+  Code, 
+  ExternalLink, 
+  ChevronDown, 
+  ChevronUp
+} from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function Projects() {
@@ -23,10 +32,10 @@ export default function Projects() {
       return pId === 'ijituyi' || pId === 'charme' || pId === 'africa-caribbean';
     }
     if (category === 'BACKEND') {
-      return pId === 'charme' || pId === 'chapterdock';
+      return pId === 'charme' || pId === 'chapterdock' || pId === 'fortifyauth';
     }
     if (category === 'SYSTEMS') {
-      return pId === 'chapterdock' || pId === 'charme';
+      return pId === 'chapterdock' || pId === 'charme' || pId === 'fortifyauth';
     }
     return false;
   };

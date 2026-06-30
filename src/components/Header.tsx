@@ -76,10 +76,10 @@ export default function Header() {
             [04] MATRIX
           </button>
           <button
-            onClick={() => scrollTo('guestbook')}
+            onClick={() => scrollTo('contact')}
             className="px-2.5 py-1.5 border-2 border-[#0d0e11] bg-white text-[#0d0e11] font-black uppercase tracking-wider text-[11px] shadow-[3px_3px_0px_#0d0e11] hover:translate-x-[1.5px] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0px_#0d0e11] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all duration-100 cursor-pointer"
           >
-            [05] COMMITS
+            [05] CONNECT
           </button>
 
           {/* Stark Action Button */}
@@ -130,10 +130,10 @@ export default function Header() {
             [04] MATRIX
           </button>
           <button
-            onClick={() => { scrollTo('guestbook'); setIsOpen(false); }}
+            onClick={() => { scrollTo('contact'); setIsOpen(false); }}
             className="w-full text-left px-4 py-3 border-2 border-[#0d0e11] bg-white text-[#0d0e11] font-black uppercase tracking-wider text-[11px] shadow-[3px_3px_0px_#0d0e11] hover:translate-x-[1.5px] hover:translate-y-[1.5px] hover:shadow-[1.5px_1.5px_0px_#0d0e11] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all duration-100 cursor-pointer"
           >
-            [05] COMMITS
+            [05] CONNECT
           </button>
           <a
             href={`mailto:${PERSONAL_INFO.email}`}

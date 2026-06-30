@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
-import Guestbook from './components/Guestbook';
+import Contact from './components/Contact';
 import { ArrowUp, Terminal, Cpu, FileClock } from 'lucide-react';
 
 export default function App() {
@@ -32,8 +32,8 @@ export default function App() {
         {/* 04 // COMPREHENSIVE SKILLS MATRIX */}
         <Skills />
 
-        {/* 05 // SYSTEM STATE GUESTBOOK */}
-        <Guestbook />
+        {/* 05 // SYSTEM STATE CONTACT */}
+        <Contact />
 
       </main>
 

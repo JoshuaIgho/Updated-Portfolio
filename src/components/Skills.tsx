@@ -16,24 +16,43 @@ export default function Skills() {
   const activeSkillObj = SKILLS.find(s => s.name === selectedSkill);
 
   // Find which of our selected projects use this skill
-  const matchingProjects = PROJECTS.filter(p => 
-    selectedSkill ? p.tags.some(tag => tag.toLowerCase() === selectedSkill.toLowerCase() || selectedSkill.toLowerCase().includes(tag.toLowerCase())) : false
-  );
+  const matchingProjects = PROJECTS.filter(p => {
+    if (!selectedSkill) return false;
+    const skillNameLower = selectedSkill.toLowerCase();
+    
+    // Explicit requested matches for Database and RESTful API
+    if (
+      skillNameLower === 'database' || 
+      skillNameLower === 'restful api' || 
+      skillNameLower.includes('database') || 
+      skillNameLower.includes('restful api')
+    ) {
+      if (['fortifyauth', 'chapterdock', 'charme'].includes(p.id)) {
+        return true;
+      }
+    }
+    
+    return p.tags.some(tag => 
+      tag.toLowerCase() === skillNameLower || 
+      skillNameLower.includes(tag.toLowerCase()) ||
+      tag.toLowerCase().includes(skillNameLower)
+    );
+  });
 
   return (
     <section id="skills" className="py-12 md:py-20 px-6 md:px-8 max-w-[1440px] mx-auto scroll-mt-24">
       
       {/* Structural Brutalist Category Header */}
-      <div className="border-2 border-black bg-black text-white p-6 sm:p-8 mb-8 shadow-[6px_6px_0px_#000000] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="border-2 border-black bg-white text-black p-6 sm:p-8 mb-8 shadow-[6px_6px_0px_#000000] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <span className="font-mono text-xs text-gray-400">// PORTFOLIO CATEGORY [04]</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-tight mt-1 uppercase">
-            SKILLSET MATRIX & ECOSYSTEM
+          <span className="font-mono text-xs text-zinc-500">// PORTFOLIO CATEGORY [04]</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black tracking-tight mt-1 uppercase text-black">
+            SKILLSET MATRIX
           </h2>
         </div>
-        <div className="font-mono text-xs text-neutral-400 bg-neutral-900 border border-neutral-800 p-3 self-stretch sm:self-auto flex items-center justify-between gap-6">
+        <div className="font-mono text-xs text-zinc-600 bg-zinc-50 border border-zinc-200 p-3 self-stretch sm:self-auto flex items-center justify-between gap-6">
           <span>CORES: HOST ACTIVE</span>
-          <span className="h-4 w-px bg-neutral-800"></span>
+          <span className="h-4 w-px bg-zinc-200"></span>
           <span>COMPETENCY: PRODUCTION BUILDS</span>
         </div>
       </div>
@@ -57,29 +76,19 @@ export default function Skills() {
                     <button
                       key={skill.name}
                       onClick={() => setSelectedSkill(skill.name)}
-                      className={`p-3 border-2 text-left brutalist-btn-transition cursor-pointer ${
+                      className={`p-4 border-2 text-left brutalist-btn-transition cursor-pointer transition-all duration-150 ${
                         isSelected 
-                          ? 'bg-black text-white border-black shadow-[4px_4px_0px_#000000]' 
-                          : 'bg-white hover:bg-neutral-50 text-black border-black shadow-[3px_3px_0px_#000000] hover:shadow-[5px_5px_0px_#000000]'
+                          ? 'bg-zinc-50 text-black border-black border-l-8 shadow-[5px_5px_0px_#000000] translate-x-[-2px] -translate-y-[-2px]' 
+                          : 'bg-white hover:bg-zinc-50 text-black border-black shadow-[3px_3px_0px_#000000] hover:shadow-[5px_5px_0px_#000000] hover:-translate-x-[0.5px] hover:-translate-y-[0.5px]'
                       }`}
                     >
                       <div className="flex items-center justify-between gap-2">
-                        <span className="font-mono text-[11px] sm:text-xs font-extrabold truncate leading-tight">
+                        <span className="font-mono text-[11px] sm:text-xs font-black uppercase text-black truncate">
                           {skill.name.toUpperCase()}
                         </span>
-                        <span className={`font-mono text-[9px] px-1 py-0.5 border font-bold leading-none ${
-                          isSelected ? 'bg-white text-black border-white' : 'bg-black text-white border-black'
-                        }`}>
-                          {skill.level}%
+                        <span className="font-mono text-[10px] text-zinc-400 font-bold select-none tracking-wider whitespace-nowrap shrink-0">
+                          {skill.category === 'frontend' ? '[ READY ]' : skill.category === 'backend' || skill.category === 'devops' ? '[ ONLINE ]' : '[ ACTIVE ]'}
                         </span>
-                      </div>
-                      
-                      {/* High-Contrast Progress Level Bar */}
-                      <div className="mt-2.5 h-1.5 w-full bg-neutral-100 border border-black overflow-hidden">
-                        <div 
-                          className={`h-full brutalist-btn-transition ${isSelected ? 'bg-white' : 'bg-black'}`} 
-                          style={{ width: `${skill.level}%` }}
-                        />
                       </div>
                     </button>
                   );
@@ -107,14 +116,56 @@ export default function Skills() {
                 </div>
 
                 <div>
-                  <span className="text-gray-400 block uppercase text-[10px]">// INTEGRATION COEFFICIENT:</span>
-                  <div className="flex items-center gap-1.5 mt-1">
-                    <span className="text-base font-black text-black font-mono">
-                      {activeSkillObj.level} / 100
-                    </span>
-                    <span className="text-black bg-white border border-black px-1.5 py-0.5 font-bold text-[9px] leading-none uppercase">
-                      SECURED_CORE
-                    </span>
+                  <span className="text-zinc-400 block uppercase text-[10px]">// ACTIVE BUILD SYSTEM STATE:</span>
+                  <div className="mt-2 space-y-2 border-2 border-black p-3.5 bg-white font-mono text-[11px] leading-relaxed">
+                    <div className="flex justify-between border-b border-dashed border-zinc-200 pb-1.5 last:border-0 last:pb-0">
+                      <span className="text-zinc-500 uppercase font-bold">DEPLOY_TARGET</span>
+                      <span className="font-black text-black">
+                        {activeSkillObj.category === 'frontend' 
+                          ? 'CLIENT_SPA // EDGE' 
+                          : activeSkillObj.category === 'backend' 
+                            ? 'EXPRESS // NODEJVM' 
+                            : activeSkillObj.category === 'devops' 
+                              ? 'REPLICATED // HOST' 
+                              : 'LAYOUT_SPEC // HCI'}
+                      </span>
+                    </div>
+                    <div className="flex justify-between border-b border-dashed border-zinc-200 pb-1.5 last:border-0 last:pb-0">
+                      <span className="text-zinc-500 uppercase font-bold">BUILD_STATUS</span>
+                      <span className="font-black text-black">
+                        {activeSkillObj.category === 'frontend' 
+                          ? 'SYNCED [ STABLE ]' 
+                          : activeSkillObj.category === 'backend' 
+                            ? 'UPTIME [ 99.98% ]' 
+                            : activeSkillObj.category === 'devops' 
+                              ? 'TRIGGER [ HOOKED ]' 
+                              : 'RULES [ COMPLIANT ]'}
+                      </span>
+                    </div>
+                    <div className="flex justify-between border-b border-dashed border-zinc-200 pb-1.5 last:border-0 last:pb-0">
+                      <span className="text-zinc-500 uppercase font-bold">SYNC_LATENCY</span>
+                      <span className="font-black text-black">
+                        {activeSkillObj.category === 'frontend' 
+                          ? '< 15ms' 
+                          : activeSkillObj.category === 'backend' 
+                            ? '12ms AVG' 
+                            : activeSkillObj.category === 'devops' 
+                              ? 'N/A' 
+                              : 'LOCAL'}
+                      </span>
+                    </div>
+                    <div className="flex justify-between border-b border-dashed border-zinc-200 pb-1.5 last:border-0 last:pb-0">
+                      <span className="text-zinc-500 uppercase font-bold">INTEGRITY_INDEX</span>
+                      <span className="font-black text-black text-xs">
+                        {activeSkillObj.category === 'frontend' 
+                          ? '100% HEALTHY' 
+                          : activeSkillObj.category === 'backend' 
+                            ? 'ENCRYPTED' 
+                            : activeSkillObj.category === 'devops' 
+                              ? 'AUTHENTICATED' 
+                              : 'VERIFIED'}
+                      </span>
+                    </div>
                   </div>
                 </div>
 

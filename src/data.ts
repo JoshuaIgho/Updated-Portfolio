@@ -97,48 +97,91 @@ export const PROJECTS: Project[] = [
       { label: 'DB Rules', value: 'RLS Active' },
       { label: 'HTML Engine', value: 'EJS Template' }
     ]
+  },
+  {
+    id: 'fortifyauth',
+    title: 'FORTIFYAUTH',
+    category: 'Authentication Infrastructure',
+    description: 'FortifyAuth is a developer-first authentication platform designed to simplify secure user authentication and authorization. It provides RESTful authentication APIs, JWT-based authentication, user account management, API documentation, and an interactive API playground, making it easy for developers to integrate secure authentication into their applications.',
+    role: 'Core Systems Engineer',
+    timeline: 'Q1 2026',
+    tags: ['NODE.JS', 'EXPRESS.JS', 'POSTGRESQL', 'JWT', 'REST API', 'SWAGGER / OPENAPI', 'DOCKER'],
+    githubUrl: 'https://github.com/JoshuaIgho/FortifyAuth',
+    demoUrl: 'https://fortifyauth-api-1.onrender.com/api/docs/',
+    keyFeatures: [
+      'Seamless User Registration and login authentication services using modern encryption algorithms',
+      'Secure JSON Web Tokens (JWT) handling access/refresh token rotation and secure session states',
+      'Integrated Swagger/OpenAPI specifications generating real-time interactive developer playgrounds',
+      'Role-Based Authorization (RBAC) middleware guarding sensitive resource and database entry points',
+      'Containerized environment architecture configured with Docker for effortless local or cloud replication'
+    ],
+    stats: [
+      { label: 'Status', value: 'Production Ready' },
+      { label: 'Architecture', value: 'REST API' },
+      { label: 'Version', value: 'v1.0' }
+    ]
   }
 ];
 
 export const EXPERIENCES: Experience[] = [
   {
     id: 'exp1',
-    role: 'Principal Systems Builder',
-    company: 'Vector Research Lab',
-    timeline: 'Jan 2024 – Present',
-    location: 'Chicago, IL',
+    role: 'Full-Stack Software Engineer',
+    company: 'FortifyAuth',
+    timeline: 'May 2026 — Present',
+    location: 'Remote',
+    sectionLabel: 'AUTHENTICATION PLATFORM & BACKEND SYSTEMS',
     achievements: [
-      'Architected internal web framework streamlining canvas telemetry visualizer interfaces across 14 global projects.',
-      'Refactored legacy Node.js render pipelines to Rust services, reducing server compute costs by 68%.',
-      'Standardized ultra-precise responsive visual guidelines which boosted general UI interaction times by 32%.'
+      'Designed and developed a developer-first authentication platform using Node.js, Express.js, TypeScript, and PostgreSQL, enabling secure authentication for modern web applications.',
+      'Architected RESTful APIs for user registration, login, JWT authentication, email verification, password recovery, and role-based access control with a modular backend architecture.',
+      'Built interactive API documentation and a testing playground, allowing developers to explore, validate, and integrate authentication endpoints efficiently.'
     ],
-    tags: ['TypeScript', 'Rust', 'WebGL', 'Docker', 'WebSockets']
+    tags: ['Node.js', 'Express.js', 'TypeScript', 'PostgreSQL', 'JWT', 'REST API', 'Docker']
   },
   {
     id: 'exp2',
-    role: 'Senior Interactive Engineer',
-    company: 'Apex Design Collective',
-    timeline: 'Aug 2022 – Dec 2023',
-    location: 'New York, NY',
+    role: 'Frontend Developer',
+    company: 'Ijituyi Signature',
+    timeline: 'Jan 2026 — Feb 2026',
+    location: 'Osun, NG',
+    sectionLabel: 'BRAND WEBSITE & DIGITAL EXPERIENCE',
     achievements: [
-      'Built bespoke experimental marketing engines and micro-frontends with React and motion.',
-      'Optimized Core Web Vitals to solid 100/100 scores across client sites with over 5M monthly active users.',
-      'Pioneered interactive component libraries reducing UI development-to-deployment times from weeks to hours.'
+      'Developed a modern business website with responsive layouts, reusable React components, and pixel-perfect implementation.',
+      'Built interactive service pages, premium branding sections, and seamless navigation focused on usability and visual consistency.',
+      'Optimized frontend performance, component organization, and responsive behavior to deliver a smooth experience across devices.',
+      'Integrated contact functionality and implemented clean, maintainable frontend architecture following modern development practices.'
     ],
-    tags: ['React', 'motion', 'Tailwind', 'Vite', 'TypeScript']
+    tags: ['React', 'Tailwind CSS', 'JavaScript', 'Responsive Design', 'Component Architecture', 'Git']
   },
   {
     id: 'exp3',
-    role: 'Full-Stack Software Engineer',
-    company: 'Core Systems Corp',
-    timeline: 'Mar 2020 – Jul 2022',
-    location: 'Austin, TX',
+    role: 'Frontend Developer',
+    company: 'Africa Caribbean Connect',
+    timeline: 'Feb 2025 — Mar 2025',
+    location: 'Remote',
+    sectionLabel: 'ORGANIZATION WEBSITE & MEDIA PLATFORM',
     achievements: [
-      'Constructed highly secure server-side Express API structures managing over 420K user logins daily.',
-      'Developed declarative database migrations and schema indexes, driving query latency down from 400ms to 8ms.',
-      'Created custom responsive administration charts visualizing heavy microservice dependencies.'
+      'Developed responsive user interfaces using React and Tailwind CSS to showcase the organization\'s mission, programs, and media content.',
+      'Built reusable UI components and structured page layouts to deliver a consistent user experience across desktop and mobile devices.',
+      'Implemented modern frontend practices, optimized page performance, and integrated interactive sections to improve accessibility and engagement.',
+      'Collaborated throughout the development process to transform design concepts into a production-ready website.'
     ],
-    tags: ['Node.js', 'Express', 'D3.js', 'SQL', 'TypeScript']
+    tags: ['React', 'Tailwind CSS', 'JavaScript', 'Responsive Design', 'UI Components', 'Git']
+  },
+  {
+    id: 'exp4',
+    role: 'Full-Stack Engineer',
+    company: 'Charmé',
+    timeline: 'Jan 2023 — Dec 2024',
+    location: 'Lagos, NG',
+    sectionLabel: 'E-COMMERCE PLATFORM & APPLICATION ENGINEERING',
+    achievements: [
+      'Designed and developed a full-stack e-commerce platform focused on performance, scalability, and seamless user experience.',
+      'Built responsive React interfaces with reusable components alongside a scalable Node.js and Express.js backend powered by PostgreSQL.',
+      'Implemented secure authentication, product management, shopping cart, order processing, and RESTful APIs to support complete e-commerce workflows.',
+      'Optimized database queries, API routes, and application state management to improve application performance, maintainability, and scalability.'
+    ],
+    tags: ['React', 'Node.js', 'Express.js', 'PostgreSQL', 'TypeScript', 'Docker']
   }
 ];
 
@@ -153,8 +196,8 @@ export const SKILLS: Skill[] = [
 
   // Backend
   { name: 'Node.js & Express', category: 'backend', level: 94, description: 'High-efficiency APIs, middleware orchestration, memory profiling.' },
-  { name: 'Rust Core / WASM', category: 'backend', level: 82, description: 'High-performance memory safety interfaces, layout-diffing subroutines.' },
-  { name: 'Database Architecture', category: 'backend', level: 85, description: 'Structured schema planning, index tuning, and efficient indexing.' },
+  { name: 'RESTful API', category: 'backend', level: 91, description: 'Robust endpoint design, request validation, middleware routing, and response formatting.' },
+  { name: 'Database', category: 'backend', level: 85, description: 'Structured schema planning, index tuning, and efficient indexing.' },
 
   // DevOps & Tools
   { name: 'Docker / Actions', category: 'devops', level: 88, description: 'Containerized deployment patterns, repeatable automated testing pipelines.' },
@@ -163,10 +206,4 @@ export const SKILLS: Skill[] = [
   // Design
   { name: 'Neo-Brutalist Layouts', category: 'design', level: 98, description: 'Heavy drop-shadow structures, thick margins, raw asymmetric geometries.' },
   { name: 'Information Display', category: 'design', level: 93, description: 'Comfortable typography hierarchies, ample line spacing, clean bento containers.' }
-];
-
-export const GUESTBOOK_SEED = [
-  { id: '1', name: 'Alina Vance', message: 'The interface is incredibly striking. The responsiveness of the filters and focus transition speed is beautiful.', role: 'Senior UX Specialist', timestamp: '2026-06-18 10:24' },
-  { id: '2', name: 'Marcus K.', message: 'The Hyperion diff-runtime runs like grease. Pixel precision is extremely hard to find.', role: 'Founding Engineer', timestamp: '2026-06-18 09:15' },
-  { id: '3', name: 'S. Chen', message: 'Clean, industrial and unpretentious. Love the typography tracking.', role: 'Creative Director', timestamp: '2026-06-17 18:40' }
 ];

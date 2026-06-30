@@ -82,7 +82,7 @@ export default function Experience() {
                 }`}>
                   <div className="py-2 space-y-4">
                     <div className="text-[10px] font-mono font-bold text-gray-400 uppercase tracking-wider">
-                      // DIRECT REVENUE & PERF INFLUENCES:
+                      // {exp.sectionLabel ? exp.sectionLabel.toUpperCase() : 'DIRECT REVENUE & PERF INFLUENCES'}:
                     </div>
                     
                     {/* Bullet points detailing performance milestones */}
