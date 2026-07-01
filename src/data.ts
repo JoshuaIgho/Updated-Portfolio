@@ -107,7 +107,7 @@ export const PROJECTS: Project[] = [
     timeline: 'Q1 2026',
     tags: ['NODE.JS', 'EXPRESS.JS', 'POSTGRESQL', 'JWT', 'REST API', 'SWAGGER / OPENAPI', 'DOCKER'],
     githubUrl: 'https://github.com/JoshuaIgho/FortifyAuth',
-    demoUrl: 'https://fortifyauth-api-1.onrender.com/api/docs/',
+    demoUrl: 'https://fortifyauth-api-1.onrender.com/',
     keyFeatures: [
       'Seamless User Registration and login authentication services using modern encryption algorithms',
       'Secure JSON Web Tokens (JWT) handling access/refresh token rotation and secure session states',
