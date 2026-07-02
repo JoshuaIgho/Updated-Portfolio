@@ -106,7 +106,7 @@ export const PROJECTS: Project[] = [
     role: 'Core Systems Engineer',
     timeline: 'Q1 2026',
     tags: ['NODE.JS', 'EXPRESS.JS', 'POSTGRESQL', 'JWT', 'REST API', 'SWAGGER / OPENAPI', 'DOCKER'],
-    githubUrl: 'https://github.com/JoshuaIgho/FortifyAuth',
+    githubUrl: 'https://github.com/JoshuaIgho/FortifyAuth-API',
     demoUrl: 'https://fortifyauth-api-1.onrender.com/',
     keyFeatures: [
       'Seamless User Registration and login authentication services using modern encryption algorithms',
