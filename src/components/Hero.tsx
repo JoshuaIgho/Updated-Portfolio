@@ -290,7 +290,7 @@ export default function Hero() {
                 </span>
               </div>
               <a 
-                href="/joshua_igho_resume_2026.pdf" 
+                href="/public/Joshua CV.pdf" 
                 download="joshua_igho_resume_2026.pdf"
                 className="px-4 py-2 bg-white text-[#0d0e11] border-2 border-[#0d0e11] shadow-[3px_3px_0px_#0d0e11] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_#0d0e11] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all duration-100 font-mono text-[10px] font-black uppercase tracking-wider text-center shrink-0 flex items-center justify-center gap-1 cursor-pointer select-none"
               >
