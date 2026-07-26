@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Send, CheckCircle, Mail, User, Briefcase, Terminal, ShieldAlert } from 'lucide-react';
+import { Send, CheckCircle, Mail, User, Phone, Terminal, ShieldAlert } from 'lucide-react';
 
 export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [affiliation, setAffiliation] = useState('');
+  const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   
   const [isSending, setIsSending] = useState(false);
@@ -52,11 +52,11 @@ export default function Contact() {
         sender_email: email.trim(),
         reply_to: email.trim(),
 
-        // Redundant parameter mapping for affiliation/phone fields
-        affiliation: affiliation.trim() || 'Not specified',
-        phone: affiliation.trim() || 'Not specified',
-        sender_phone: affiliation.trim() || 'Not specified',
-        company: affiliation.trim() || 'Not specified',
+        // Redundant parameter mapping for phone fields
+        phone: phone.trim() || 'Not specified',
+        sender_phone: phone.trim() || 'Not specified',
+        affiliation: phone.trim() || 'Not specified',
+        company: phone.trim() || 'Not specified',
 
         // Message body
         message: message.trim(),
@@ -68,7 +68,7 @@ export default function Contact() {
           setSuccessMsg('TRANSMISSION SUCCESSFUL! Your message has been sent via EmailJS.');
           setName('');
           setEmail('');
-          setAffiliation('');
+          setPhone('');
           setMessage('');
         })
         .catch((err) => {
@@ -83,7 +83,7 @@ export default function Contact() {
         setSuccessMsg('TRANSMISSION SIMULATED SUCCESSFULLY! (Connection offline due to missing EmailJS configurations).');
         setName('');
         setEmail('');
-        setAffiliation('');
+        setPhone('');
         setMessage('');
         setIsSending(false);
       }, 1200);
@@ -162,18 +162,18 @@ export default function Contact() {
             </div>
 
             <div>
-              <label htmlFor="contact-affiliation" className="block text-black font-extrabold uppercase mb-1.5 flex justify-between select-none">
-                <span>TITLE / ORGANIZATIONAL AFFILIATION</span>
+              <label htmlFor="contact-phone" className="block text-black font-extrabold uppercase mb-1.5 flex justify-between select-none">
+                <span>PHONE NUMBER</span>
                 <span className="text-[9px] text-gray-400">OPTIONAL</span>
               </label>
               <div className="relative">
-                <Briefcase className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
+                <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
                 <input
-                  id="contact-affiliation"
-                  type="text"
-                  placeholder="E.G. CHIEF ARCHITECT @ TECHCORP"
-                  value={affiliation}
-                  onChange={(e) => setAffiliation(e.target.value)}
+                  id="contact-phone"
+                  type="tel"
+                  placeholder="E.G. +1 (555) 000-0000"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   className="w-full bg-white border-2 border-black pl-10 pr-3 py-2.5 focus:outline-none focus:bg-zinc-50 text-xs font-bold rounded-none uppercase placeholder:text-gray-300"
                 />
               </div>

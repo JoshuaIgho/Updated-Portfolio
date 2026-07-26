@@ -22,7 +22,7 @@ export const PROJECTS: Project[] = [
     timeline: 'Q1 – Q2 2026',
     tags: ['REACT', 'TYPESCRIPT', 'HTML5', 'CSS3'],
     githubUrl: 'https://github.com/JoshuaIgho/Monogram-Website',
-    pendingText: '[ LIVE_PREVIEW_PENDING ]',
+    demoUrl: 'https://ijituyi.netlify.app/',
     keyFeatures: [
       'Bespoke SVG monogram vector calculations with high-density layout rendering',
       'Asymmetrical typographic systems using customized modern serif pairings',
@@ -75,27 +75,6 @@ export const PROJECTS: Project[] = [
       { label: 'Feed Speed', value: '< 200ms Load' },
       { label: 'Design Score', value: '98% AAA' },
       { label: 'Viewport Ref', value: 'Pure Fluid' }
-    ]
-  },
-  {
-    id: 'chapterdock',
-    title: 'CHAPTERDOCK',
-    category: 'Library Curation Engine',
-    description: 'A sleek, secure web application designed as a modern digital harbor for book lovers to log, manage, and review their personal libraries. Features secure user authentication for login/signup flows, enabling readers to write custom book reviews and assign star ratings to track their reading journeys.',
-    role: 'Backend Developer / Systems',
-    timeline: 'Q4 2025',
-    tags: ['NODE.JS', 'SUPABASE', 'EJS', 'JAVASCRIPT'],
-    githubUrl: 'https://github.com/JoshuaIgho/Book-review',
-    pendingText: '[ DOCKING_LIVE_PENDING ]',
-    keyFeatures: [
-      'Supabase cloud DB synchronization implementing strict Row-Level Security checks',
-      'Interactive reading session tracker storing document indexes locally and globally',
-      'Secure user cookie verification with fast Express-router middleware'
-    ],
-    stats: [
-      { label: 'User Session', value: 'Supabase Auth' },
-      { label: 'DB Rules', value: 'RLS Active' },
-      { label: 'HTML Engine', value: 'EJS Template' }
     ]
   },
   {

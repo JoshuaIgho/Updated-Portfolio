@@ -32,10 +32,10 @@ export default function Projects() {
       return pId === 'ijituyi' || pId === 'charme' || pId === 'africa-caribbean';
     }
     if (category === 'BACKEND') {
-      return pId === 'charme' || pId === 'chapterdock' || pId === 'fortifyauth';
+      return pId === 'charme' || pId === 'fortifyauth';
     }
     if (category === 'SYSTEMS') {
-      return pId === 'chapterdock' || pId === 'charme' || pId === 'fortifyauth';
+      return pId === 'charme' || pId === 'fortifyauth';
     }
     return false;
   };
